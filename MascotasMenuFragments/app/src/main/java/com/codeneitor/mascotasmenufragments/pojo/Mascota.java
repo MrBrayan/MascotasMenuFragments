@@ -9,6 +9,14 @@ public class Mascota {
     private String nombre;
     private int likes;
 
+    public Mascota(){
+
+    }
+    public Mascota(int foto, int likes){
+        this.foto = foto;
+        this.likes = likes;
+    }
+
     public Mascota(int foto, String nombre, int likes) {
         this.foto = foto;
         this.nombre = nombre;

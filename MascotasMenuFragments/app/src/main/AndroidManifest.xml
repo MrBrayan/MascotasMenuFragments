@@ -23,14 +23,19 @@
             <!-- Soporte para versiones 4.0 o anteriores -->
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MainActivity"></meta-data>
+                android:value=".MainActivity"/>
         </activity>
-        <activity android:name=".MascotaDetalle" />
+        <activity android:name=".MascotaDetalle">
+            <!-- Soporte para versiones 4.0 o anteriores -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity"/>
+        </activity>
         <activity android:name=".MascotaFavoritos">
             <!-- Soporte para versiones 4.0 o anteriores -->
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MainActivity"></meta-data>
+                android:value=".MainActivity"/>
         </activity>
     </application>
 

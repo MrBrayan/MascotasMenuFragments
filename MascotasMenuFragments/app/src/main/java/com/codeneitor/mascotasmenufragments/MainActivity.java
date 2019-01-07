@@ -12,7 +12,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import com.codeneitor.mascotasmenufragments.adapter.PageAdapter;
-import com.codeneitor.mascotasmenufragments.view.fragment.MascotaFragment;
+import com.codeneitor.mascotasmenufragments.view.fragment.PerfilFragment;
 import com.codeneitor.mascotasmenufragments.view.fragment.RecyclerViewFragment;
 
 import java.util.ArrayList;
@@ -43,15 +43,7 @@ public class MainActivity extends AppCompatActivity {
         }
         setUpViewPager();
 
-
-
-        /*
-
-        */
-
     }
-
-
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu){
@@ -75,9 +67,7 @@ public class MainActivity extends AppCompatActivity {
                 Intent about = new Intent(MainActivity.this, AboutActivity.class);
                 startActivity(about);
                 break;
-
         }
-
         return super.onOptionsItemSelected(item);
     }
 
@@ -86,7 +76,7 @@ public class MainActivity extends AppCompatActivity {
         ArrayList<Fragment> fragments = new ArrayList<>();
 
         fragments.add(new RecyclerViewFragment());
-        fragments.add(new MascotaFragment());
+        fragments.add(new PerfilFragment());
 
         return fragments;
     }

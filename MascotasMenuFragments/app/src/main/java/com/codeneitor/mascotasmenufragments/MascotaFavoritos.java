@@ -37,7 +37,7 @@ public class MascotaFavoritos extends AppCompatActivity {
 
         listaMascotas.setLayoutManager(glm);
 
-        iniciarListaContactos();
+        iniciarListaMascotas();
         iniciarAdaptador();
 
     }
@@ -49,7 +49,7 @@ public class MascotaFavoritos extends AppCompatActivity {
         listaMascotas.setAdapter(adaptador);
     }
 
-    public void iniciarListaContactos(){
+    public void iniciarListaMascotas(){
         mascotas = new ArrayList<>();
         mascotas.add(new Mascota(R.drawable.huella,"Huella",200));
         mascotas.add(new Mascota(R.drawable.bone_yellow,"Hueso",145));

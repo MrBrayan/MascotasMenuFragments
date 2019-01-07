@@ -33,22 +33,25 @@ public class MascotaDetalle extends AppCompatActivity {
         getSupportActionBar().setDisplayShowTitleEnabled(false);
 
         Bundle parametros = getIntent().getExtras();
+        try{
+            int foto = parametros.getInt(getResources().getString(R.string.pfoto));
+            String nombre = parametros.getString(getResources().getString(R.string.pnombre));
+            String likes = parametros.getString(getResources().getString(R.string.plikes));
+            imvMascota = (ImageView) findViewById(R.id.imvMascota);
+            tvMascotaNombre = (TextView) findViewById(R.id.tvMascotaNombre);
+            tvMascotaLikes = (TextView) findViewById(R.id.tvMascotaLikes);
+            imvMascota.setImageResource(foto);
+            Log.i("FOTO",""+foto);
+            tvMascotaNombre.setText(nombre);
+            Log.i("NOMBRE",""+nombre);
+            tvMascotaLikes.setText(likes);
+            Log.i("LIKES",""+likes);
+        }catch(Exception e){
+            Log.i("MascotaDetalle","Error obteniendo los parámetros");
+            e.printStackTrace();
+        }
         int foto = parametros.getInt(getResources().getString(R.string.pfoto));
-        String nombre = parametros.getString(getResources().getString(R.string.pnombre));
         String likes = parametros.getString(getResources().getString(R.string.plikes));
-
-        imvMascota = (ImageView) findViewById(R.id.imvMascota);
-        tvMascotaNombre = (TextView) findViewById(R.id.tvMascotaNombre);
-        tvMascotaLikes = (TextView) findViewById(R.id.tvMascotaLikes);
-
-
-        imvMascota.setImageResource(foto);
-        Log.i("FOTO",""+foto);
-        tvMascotaNombre.setText(nombre);
-        Log.i("NOMBRE",""+nombre);
-        tvMascotaLikes.setText(likes);
-        Log.i("LIKES",""+likes);
-
     }
 
     @Override

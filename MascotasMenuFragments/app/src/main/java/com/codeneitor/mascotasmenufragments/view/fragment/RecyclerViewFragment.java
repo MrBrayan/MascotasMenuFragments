@@ -3,7 +3,7 @@ package com.codeneitor.mascotasmenufragments.view.fragment;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
-import android.support.v7.widget.GridLayoutManager;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -30,59 +30,27 @@ public class RecyclerViewFragment extends Fragment {
 
         View view = inflater.inflate(R.layout.fragment_recyclerview, container, false);
 
-        listaMascotas = (RecyclerView) view.findViewById(R.id.rvMascotas);
+        listaMascotas = view.findViewById(R.id.rvMascotas);
 
-        //LinearLayoutManager llm = new LinearLayoutManager(this);
-        GridLayoutManager glm = new GridLayoutManager(getActivity(), 2);
+        LinearLayoutManager llm = new LinearLayoutManager(getActivity());
+        llm.setOrientation(LinearLayoutManager.VERTICAL);
 
-        //llm.setOrientation(LinearLayoutManager.VERTICAL);
+        listaMascotas.setLayoutManager(llm);
 
-        //listaMascotas.setLayoutManager(llm);
-        listaMascotas.setLayoutManager(glm);
-
-        iniciarListaContactos();
+        iniciarListaMascotas();
         iniciarAdaptador();
-        //Log.i("ERROR","ADAPTADAOR INICIALIZADO");
 
         return view;
-        //return super.onCreateView(inflater, container, savedInstanceState);
     }
 
     public MascotaAdaptador adaptador;
     public void iniciarAdaptador(){
         adaptador = new MascotaAdaptador(mascotas, getActivity());
-        //MascotaAdaptador adaptador = new MascotaAdaptador(mascotas);
         listaMascotas.setAdapter(adaptador);
     }
 
-    public void iniciarListaContactos(){
-        mascotas = new ArrayList<Mascota>();
-        mascotas.add(new Mascota(R.drawable.hotel,"Star",134));
-        mascotas.add(new Mascota(R.drawable.bone_yellow,"Bone",150));
-        mascotas.add(new Mascota(R.drawable.hotel,"Star",134));
-        mascotas.add(new Mascota(R.drawable.bone_yellow,"Bone",150));
-        mascotas.add(new Mascota(R.drawable.hotel,"Star",134));
-        mascotas.add(new Mascota(R.drawable.bone_yellow,"Bone",150));
-        mascotas.add(new Mascota(R.drawable.hotel,"Star",134));
-        mascotas.add(new Mascota(R.drawable.bone_yellow,"Bone",150));
-        mascotas.add(new Mascota(R.drawable.hotel,"Star",134));
-        mascotas.add(new Mascota(R.drawable.bone_yellow,"Bone",150));
-        mascotas.add(new Mascota(R.drawable.hotel,"Star",134));
-        mascotas.add(new Mascota(R.drawable.bone_yellow,"Bone",150));
-        mascotas.add(new Mascota(R.drawable.hotel,"Star",134));
-        mascotas.add(new Mascota(R.drawable.bone_yellow,"Bone",150));
-        mascotas.add(new Mascota(R.drawable.hotel,"Star",134));
-        mascotas.add(new Mascota(R.drawable.bone_yellow,"Bone",150));
-        mascotas.add(new Mascota(R.drawable.hotel,"Star",134));
-        mascotas.add(new Mascota(R.drawable.bone_yellow,"Bone",150));
-        mascotas.add(new Mascota(R.drawable.hotel,"Star",134));
-        mascotas.add(new Mascota(R.drawable.bone_yellow,"Bone",150));
-        mascotas.add(new Mascota(R.drawable.hotel,"Star",134));
-        mascotas.add(new Mascota(R.drawable.bone_yellow,"Bone",150));
-        mascotas.add(new Mascota(R.drawable.hotel,"Star",134));
-        mascotas.add(new Mascota(R.drawable.bone_yellow,"Bone",150));
-        mascotas.add(new Mascota(R.drawable.hotel,"Star",134));
-        mascotas.add(new Mascota(R.drawable.bone_yellow,"Bone",150));
+    public void iniciarListaMascotas(){
+        mascotas = new ArrayList<>();
         mascotas.add(new Mascota(R.drawable.hotel,"Star",134));
         mascotas.add(new Mascota(R.drawable.bone_yellow,"Bone",150));
         mascotas.add(new Mascota(R.drawable.hotel,"Star",134));
