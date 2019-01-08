@@ -48,7 +48,7 @@ public class ContactoActivity extends AppCompatActivity implements View.OnClickL
         //Agregamos soporte al botón de navegación hacia atrás
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         //Agregamos la huella en nuestro Toolbar
-        getSupportActionBar().setIcon(R.drawable.huella);
+        getSupportActionBar().setIcon(R.drawable.huella_perro);
         // Remove default title text
         getSupportActionBar().setDisplayShowTitleEnabled(false);
 

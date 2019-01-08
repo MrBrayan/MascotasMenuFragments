@@ -57,15 +57,25 @@ public class PerfilFragment extends Fragment {
 
     public void iniciarListaMascotas(){
         mascotas = new ArrayList<Mascota>();
+        mascotas.add(new Mascota(R.drawable.garfield,134));
+        mascotas.add(new Mascota(R.drawable.gyo,150));
+        mascotas.add(new Mascota(R.drawable.oddie,134));
+        mascotas.add(new Mascota(R.drawable.gyo2,150));
         mascotas.add(new Mascota(R.drawable.hotel,134));
+        mascotas.add(new Mascota(R.drawable.oddie,150));
+        mascotas.add(new Mascota(R.drawable.garfield,134));
+        mascotas.add(new Mascota(R.drawable.gyo2,150));
+        mascotas.add(new Mascota(R.drawable.huella_perro,134));
         mascotas.add(new Mascota(R.drawable.bone_yellow,150));
+        mascotas.add(new Mascota(R.drawable.garfield,134));
+        mascotas.add(new Mascota(R.drawable.gyo,150));
+        mascotas.add(new Mascota(R.drawable.oddie,134));
+        mascotas.add(new Mascota(R.drawable.gyo2,150));
         mascotas.add(new Mascota(R.drawable.hotel,134));
-        mascotas.add(new Mascota(R.drawable.bone_yellow,150));
-        mascotas.add(new Mascota(R.drawable.hotel,134));
-        mascotas.add(new Mascota(R.drawable.bone_yellow,150));
-        mascotas.add(new Mascota(R.drawable.hotel,134));
-        mascotas.add(new Mascota(R.drawable.bone_yellow,150));
-        mascotas.add(new Mascota(R.drawable.hotel,134));
+        mascotas.add(new Mascota(R.drawable.oddie,150));
+        mascotas.add(new Mascota(R.drawable.garfield,134));
+        mascotas.add(new Mascota(R.drawable.gyo2,150));
+        mascotas.add(new Mascota(R.drawable.huella_perro,134));
         mascotas.add(new Mascota(R.drawable.bone_yellow,150));
     }
 

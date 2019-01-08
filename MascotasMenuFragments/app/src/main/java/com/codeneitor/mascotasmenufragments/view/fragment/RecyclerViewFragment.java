@@ -51,21 +51,41 @@ public class RecyclerViewFragment extends Fragment {
 
     public void iniciarListaMascotas(){
         mascotas = new ArrayList<>();
+        mascotas.add(new Mascota(R.drawable.garfield,"Garfield",123));
+        mascotas.add(new Mascota(R.drawable.oddie,"Oddie",145));
+        mascotas.add(new Mascota(R.drawable.gyo2,"Garfield y Oddie",145));
+        mascotas.add(new Mascota(R.drawable.gyo,"Garfield y Oddie",875));
+        mascotas.add(new Mascota(R.drawable.huella_perro,"Dog",564));
+        mascotas.add(new Mascota(R.drawable.bone_white,"Bone",546));
+        mascotas.add(new Mascota(R.drawable.bone_yellow,"Bone",767));
+        mascotas.add(new Mascota(R.drawable.hotel,"Star",275));
+        mascotas.add(new Mascota(R.drawable.bone_yellow,"Bone",876));
+        mascotas.add(new Mascota(R.drawable.garfield,"Garfield",945));
+        mascotas.add(new Mascota(R.drawable.oddie,"Oddie",345));
+        mascotas.add(new Mascota(R.drawable.gyo2,"Garfield y Oddie",635));
+        mascotas.add(new Mascota(R.drawable.gyo,"Garfield y Oddie",150));
+        mascotas.add(new Mascota(R.drawable.huella_perro,"Dog",134));
+        mascotas.add(new Mascota(R.drawable.bone_white,"Bone",150));
+        mascotas.add(new Mascota(R.drawable.bone_yellow,"Bone",134));
         mascotas.add(new Mascota(R.drawable.hotel,"Star",134));
         mascotas.add(new Mascota(R.drawable.bone_yellow,"Bone",150));
+        mascotas.add(new Mascota(R.drawable.garfield,"Garfield",134));
+        mascotas.add(new Mascota(R.drawable.oddie,"Oddie",150));
+        mascotas.add(new Mascota(R.drawable.gyo2,"Garfield y Oddie",134));
+        mascotas.add(new Mascota(R.drawable.hotel,"Star",134));
+        mascotas.add(new Mascota(R.drawable.gyo,"Garfield y Oddie",150));
+        mascotas.add(new Mascota(R.drawable.huella_perro,"Dog",134));
+        mascotas.add(new Mascota(R.drawable.bone_white,"Bone",150));
+        mascotas.add(new Mascota(R.drawable.bone_yellow,"Bone",134));
         mascotas.add(new Mascota(R.drawable.hotel,"Star",134));
         mascotas.add(new Mascota(R.drawable.bone_yellow,"Bone",150));
-        mascotas.add(new Mascota(R.drawable.hotel,"Star",134));
-        mascotas.add(new Mascota(R.drawable.bone_yellow,"Bone",150));
-        mascotas.add(new Mascota(R.drawable.hotel,"Star",134));
-        mascotas.add(new Mascota(R.drawable.bone_yellow,"Bone",150));
-        mascotas.add(new Mascota(R.drawable.hotel,"Star",134));
-        mascotas.add(new Mascota(R.drawable.bone_yellow,"Bone",150));
-        mascotas.add(new Mascota(R.drawable.hotel,"Star",134));
-        mascotas.add(new Mascota(R.drawable.bone_yellow,"Bone",150));
-        mascotas.add(new Mascota(R.drawable.hotel,"Star",134));
-        mascotas.add(new Mascota(R.drawable.bone_yellow,"Bone",150));
-        mascotas.add(new Mascota(R.drawable.hotel,"Star",134));
-        mascotas.add(new Mascota(R.drawable.bone_yellow,"Bone",150));
+        mascotas.add(new Mascota(R.drawable.garfield,"Garfield",134));
+        mascotas.add(new Mascota(R.drawable.oddie,"Oddie",150));
+        mascotas.add(new Mascota(R.drawable.gyo2,"Garfield y Oddie",134));
+        mascotas.add(new Mascota(R.drawable.gyo,"Garfield y Oddie",150));
+        mascotas.add(new Mascota(R.drawable.huella_perro,"Dog",134));
+        mascotas.add(new Mascota(R.drawable.bone_white,"Bone",150));
+        mascotas.add(new Mascota(R.drawable.bone_yellow,"Bone",134));
+
     }
 }

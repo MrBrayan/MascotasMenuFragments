@@ -38,6 +38,8 @@ public class MainActivity extends AppCompatActivity {
 
         if(toolbar!= null){
             setSupportActionBar(toolbar);
+            //Agregamos la huella en nuestro Toolbar
+            getSupportActionBar().setIcon(R.drawable.huella_perro);
             // Remove default title text
             getSupportActionBar().setDisplayShowTitleEnabled(false);
         }
@@ -85,7 +87,7 @@ public class MainActivity extends AppCompatActivity {
         viewPager.setAdapter(new PageAdapter(getSupportFragmentManager(), agregarFragments()));
         tabLayout.setupWithViewPager(viewPager);
 
-        tabLayout.getTabAt(0).setIcon(R.drawable.huella);
+        tabLayout.getTabAt(0).setIcon(R.drawable.huella_perro);
         tabLayout.getTabAt(1).setIcon(R.drawable.bone_yellow);
     }
 

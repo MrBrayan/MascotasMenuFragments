@@ -3,7 +3,6 @@ package com.codeneitor.mascotasmenufragments.adapter;
 import android.app.Activity;
 import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,44 +16,38 @@ import com.codeneitor.mascotasmenufragments.pojo.Mascota;
 import java.util.ArrayList;
 
 /**
- * Created by b41n on 7/01/19.
+ * Created by b41n on 8/01/19.
  */
 
-public class PerfilAdapter extends RecyclerView.Adapter<PerfilAdapter.PerfilViewHolder>{
-    ArrayList<Mascota> mascotas;
-    Activity activity;
+public class FavoritosAdapter extends RecyclerView.Adapter<FavoritosAdapter.FavoritosViewHolder> {
+    private ArrayList<Mascota> mascotas;
+    private Activity activity;
 
-    public PerfilAdapter(ArrayList<Mascota> mascotas, Activity activity){
+    public FavoritosAdapter(ArrayList<Mascota> mascotas, Activity activity){
         this.mascotas = mascotas;
         this.activity = activity;
     }
 
     @Override
-    public PerfilViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(
-                R.layout.cardview_grid_mascota, parent, false);
-        return new PerfilViewHolder(view);
+    public FavoritosViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.cardview_mascota, parent, false);
+        return new FavoritosViewHolder(v);
     }
 
     @Override
-    public void onBindViewHolder(PerfilViewHolder perfilViewHolder, int position) {
+    public void onBindViewHolder(FavoritosViewHolder favoritosViewHolder, int position) {
         final Mascota mascota = mascotas.get(position);
-        perfilViewHolder.imvMascota.setImageResource(mascota.getFoto());
-        //perfilViewHolder.tvMascotaNombre.setText(mascota.getNombre());
-        perfilViewHolder.tvMascotaLikes.setText(Integer.toString(mascota.getLikes()));
+        favoritosViewHolder.imvMascota.setImageResource(mascota.getFoto());
+        favoritosViewHolder.tvMascotaNombre.setText(mascota.getNombre());
+        favoritosViewHolder.tvMascotaLikes.setText(String.valueOf(mascota.getLikes()));
 
-        perfilViewHolder.imvMascota.setOnClickListener(new View.OnClickListener() {
+        favoritosViewHolder.imvMascota.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(activity, MascotaDetalle.class);
-
                 intent.putExtra(activity.getResources().getString(R.string.pfoto), mascota.getFoto());
                 intent.putExtra(activity.getResources().getString(R.string.pnombre), mascota.getNombre());
                 intent.putExtra(activity.getResources().getString(R.string.plikes), mascota.getLikes());
-
-                Log.i("FOTO",":"+mascota.getFoto());
-                Log.i("NOMBRE",":"+mascota.getNombre());
-                Log.i("LIKES",":"+mascota.getLikes());
                 activity.startActivity(intent);
             }
         });
@@ -65,16 +58,16 @@ public class PerfilAdapter extends RecyclerView.Adapter<PerfilAdapter.PerfilView
         return mascotas.size();
     }
 
-    public static class PerfilViewHolder extends RecyclerView.ViewHolder{
+    public static class FavoritosViewHolder extends RecyclerView.ViewHolder{
 
         private ImageView imvMascota;
-        //private TextView tvMascotaNombre;
+        private TextView tvMascotaNombre;
         private TextView tvMascotaLikes;
 
-        public PerfilViewHolder(View itemView) {
+        public FavoritosViewHolder(View itemView) {
             super(itemView);
             imvMascota = (ImageView) itemView.findViewById(R.id.imvMascota);
-            //tvMascotaNombre = (TextView) itemView.findViewById(R.id.tvMascotaNombre);
+            tvMascotaNombre = (TextView) itemView.findViewById(R.id.tvMascotaNombre);
             tvMascotaLikes =(TextView) itemView.findViewById(R.id.tvMascotaLikes);
         }
     }
